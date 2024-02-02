@@ -1,0 +1,80 @@
+site_name: Logan Tran Journey
+repo_url: 
+theme: 
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: indigo
+      accent: amber
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: indigo
+      accent: amber
+extra_css: 
+    - css/extra.css
+extra_javascript:
+    - css/footer.js
+# site_url: https://example.com/
+
+nav:
+    - Home
+      
+# plugins:
+#     - encryptcontent:
+#         global_password: 'abc'
+#         title_prefix: ''
+#         summary: 'Encrypted content'
+#         placeholder: 'Enter your password'
+#         decryption_failure_message: 'Wrong password!'
+#         encryption_info_message: 'Please contact me for password !'
+#         input_class: 'md-search__form md-search__input'
+#         button_class: 'md-search__icon'
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/logantran26/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/bao-long-tran/
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/logantran26/" target="_blank" rel="noopener">Logan Tran</a>
