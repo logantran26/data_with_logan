@@ -8,6 +8,14 @@ theme:
     - navigation.footer
     - navigation.indexes
     - navigation.tracking
+    - toc.follow
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
     # - navigation.path
     # - navigation.expand
     # - navigation.instant
@@ -16,16 +24,7 @@ theme:
     # - navigation.prune
     # - navigation.tabs.sticky
     # - toc.integrate
-    - toc.follow
-    - search.highlight
-    - search.share
-    - search.suggest
-    - content.tabs.link
-    # - content.code.annotation
-    - content.code.annotate
-    - content.code.copy
     # - content.code.select
-    - content.tooltips
   language: en
   palette:
     - scheme: default
@@ -49,9 +48,7 @@ nav:
   - Home: index.md
   - dbt:
     - dbt/index.md
-    # - Architecture:
-    # - Deployment:
-    # - Tips & Tricks:
+    - Overview: dbt/1.overview.md
   - Snowflake: 
     - snowflake/index.md
     - Cost Optimization: 
@@ -65,19 +62,21 @@ nav:
     - Overview: dagster/1.overview.md
     - Setting Up: dagster/2.setting_up.md
     - Deployment: dagster/3.deployment.md
-    # - Tips & Tricks:
       
 plugins:
+  - search
   - glightbox
-#     - encryptcontent:
-#         global_password: 'abc'
-#         title_prefix: ''
-#         summary: 'Encrypted content'
-#         placeholder: 'Enter your password'
-#         decryption_failure_message: 'Wrong password!'
-#         encryption_info_message: 'Please contact me for password !'
-#         input_class: 'md-search__form md-search__input'
-#         button_class: 'md-search__icon'
+  - encryptcontent:
+      global_password: '12345'
+      title_prefix: ''
+      summary: 'Encrypted content'
+      placeholder: 'Enter password'
+      decryption_failure_message: 'Wrong password!'
+      encryption_info_message: 'Password is 12345. Enjoy 😊!'
+      input_class: 'md-input'
+      # button_class: 'md-search__icon'
+      # password_button_text: 'ENTER'
+      # password_button: True
 
 markdown_extensions:
   - admonition
@@ -109,4 +108,4 @@ extra:
       link: https://www.linkedin.com/in/bao-long-tran/
 
 copyright: |
-  &copy; 2024 <a href="https://github.com/logantran26/" target="_blank" rel="noopener">Logan Tran</a>
+  &copy; 2024 <a href="#" target="_blank" rel="noopener">Logan Tran</a>
