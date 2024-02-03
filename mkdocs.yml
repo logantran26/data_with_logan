@@ -1,17 +1,31 @@
-site_name: Logan Tran Journey
-repo_url: 
+site_name: Data With Logan
 theme: 
   name: material
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
-    - toc.integrate
-    - search.suggest
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    # - navigation.path
+    # - navigation.expand
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    # - navigation.tabs.sticky
+    # - toc.integrate
+    - toc.follow
     - search.highlight
+    - search.share
+    - search.suggest
     - content.tabs.link
-    - content.code.annotation
+    # - content.code.annotation
+    - content.code.annotate
     - content.code.copy
+    # - content.code.select
+    - content.tooltips
   language: en
   palette:
     - scheme: default
@@ -30,12 +44,31 @@ extra_css:
     - css/extra.css
 extra_javascript:
     - css/footer.js
-# site_url: https://example.com/
 
 nav:
-    - Home
+  - Home: index.md
+  - dbt:
+    - dbt/index.md
+    # - Architecture:
+    # - Deployment:
+    # - Tips & Tricks:
+  - Snowflake: 
+    - snowflake/index.md
+    - Cost Optimization: 
+      - snowflake/cost_optimization/index.md
+      - Warehouse Sizing: snowflake/cost_optimization/1.warehouse_sizing.md
+      - Incremental Materialization: snowflake/cost_optimization/2.incremental_materialization.md
+      - Snowflake Stream: snowflake/cost_optimization/3.snowflake_stream.md
+      - Update & Delete Principal: snowflake/cost_optimization/4.update_and_delete_principal.md
+  - Dagster:
+    - dagster/index.md
+    - Overview: dagster/1.overview.md
+    - Setting Up: dagster/2.setting_up.md
+    - Deployment: dagster/3.deployment.md
+    # - Tips & Tricks:
       
-# plugins:
+plugins:
+  - glightbox
 #     - encryptcontent:
 #         global_password: 'abc'
 #         title_prefix: ''
@@ -54,6 +87,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.mark
   - pymdownx.snippets
+  - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.arithmatex:
@@ -71,8 +105,6 @@ markdown_extensions:
 
 extra:
   social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/logantran26/
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/bao-long-tran/
 
